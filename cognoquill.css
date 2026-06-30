@@ -1,0 +1,427 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Cormorant Garamond', serif;
+    background:#F6EBDD;
+    color:#4E342E;
+    line-height:1.7;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.hero{
+    height:300px;
+    background:url("bg4.webp") center center/cover no-repeat;
+    position:relative;
+}
+
+.overlay{
+    background:rgba(45,28,20,.45);
+    width:100%;
+    height:100%;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+.overlay h1{
+
+    color:#FDF8F2;
+
+    font-size:4rem;
+
+    letter-spacing:10px;
+
+    font-weight:700;
+}
+
+.hero-text{
+
+    margin-top:15px;
+
+    color:#F8F2EA;
+
+    font-size:1.3rem;
+
+    letter-spacing:1px;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+nav{
+
+    background:#8B6B4A;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 7%;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+}
+
+.logo{
+
+    color:white;
+
+    font-size:1.5rem;
+
+    font-weight:700;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:28px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:#fff7ef;
+
+    transition:.3s;
+
+    font-size:1rem;
+
+}
+
+nav a:hover{
+
+    color:#F3D7A3;
+
+}
+
+.menu-btn{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:2rem;
+
+    cursor:pointer;
+
+}
+
+/* ===========================
+   INTRO
+=========================== */
+
+.intro{
+
+    width:min(900px,90%);
+
+    margin:70px auto;
+
+    text-align:center;
+
+}
+
+.intro h2{
+
+    font-size:2.6rem;
+
+    margin-bottom:20px;
+
+    color:#5D4037;
+
+}
+
+.intro p{
+
+    font-size:1.2rem;
+
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.card-section{
+
+    width:92%;
+
+    margin:auto;
+
+    margin-bottom:80px;
+
+}
+
+.container{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:35px;
+
+}
+
+.card-link{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+.card{
+
+    width:300px;
+
+    background:#FFF9F3;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.18);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.25);
+
+}
+
+.card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.card-content{
+
+    padding:22px;
+
+    text-align:center;
+
+}
+
+.card-content h3{
+
+    font-size:1.5rem;
+
+    color:#5D4037;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    background:#8B6B4A;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media(max-width:992px){
+
+.hero{
+
+height:240px;
+
+}
+
+.overlay h1{
+
+font-size:3rem;
+
+}
+
+.container{
+
+gap:25px;
+
+}
+
+.card{
+
+width:260px;
+
+}
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.menu-btn{
+
+display:block;
+
+}
+
+nav{
+
+flex-wrap:wrap;
+
+}
+
+nav ul{
+
+display:none;
+
+flex-direction:column;
+
+width:100%;
+
+margin-top:20px;
+
+gap:18px;
+
+}
+
+nav ul.show{
+
+display:flex;
+
+}
+
+.overlay h1{
+
+font-size:2.3rem;
+
+letter-spacing:4px;
+
+}
+
+.hero-text{
+
+font-size:1rem;
+
+padding:0 20px;
+
+}
+
+.intro{
+
+margin:50px auto;
+
+}
+
+.intro h2{
+
+font-size:2rem;
+
+}
+
+.intro p{
+
+font-size:1.05rem;
+
+}
+
+.card{
+
+width:100%;
+
+max-width:340px;
+
+}
+
+.card img{
+
+height:210px;
+
+}
+
+}
+
+/* ===========================
+   SMALL PHONES
+=========================== */
+
+@media(max-width:480px){
+
+.overlay h1{
+
+font-size:1.8rem;
+
+}
+
+.hero{
+
+height:220px;
+
+}
+
+.intro h2{
+
+font-size:1.8rem;
+
+}
+
+footer{
+
+font-size:.9rem;
+
+}
+
+}
