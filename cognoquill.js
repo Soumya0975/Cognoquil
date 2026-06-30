@@ -1,86 +1,132 @@
 // ===============================
-// Mobile Navigation
+// MOBILE NAVIGATION
 // ===============================
 
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
 
-if (menuBtn && navLinks) {
+if(menuBtn && navLinks){
 
-    menuBtn.addEventListener("click", () => {
-        navLinks.classList.toggle("show");
-    });
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+});
 
-    document.querySelectorAll("#navLinks a").forEach(link => {
-        link.addEventListener("click", () => {
-            navLinks.classList.remove("show");
-        });
+document.querySelectorAll("#navLinks a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
     });
+});
 
 }
 
-// ===============================
-// Navbar Shadow on Scroll
-// ===============================
-
 window.addEventListener("scroll", () => {
 
-    const nav = document.querySelector("nav");
+    const nav=document.querySelector("nav");
 
-    if (!nav) return;
+    if(nav){
 
-    if (window.scrollY > 40) {
-        nav.style.boxShadow = "0 5px 15px rgba(0,0,0,0.18)";
-    } else {
-        nav.style.boxShadow = "none";
+        if(window.scrollY>40){
+
+            nav.style.boxShadow="0 5px 15px rgba(0,0,0,.18)";
+
+        }
+
+        else{
+
+            nav.style.boxShadow="none";
+
+        }
+
     }
 
 });
 
+
 // ===============================
-// Submission Modal
+// SUBMISSION MODAL
 // ===============================
 
-const modal = document.getElementById("submitModal");
-const addCard = document.querySelector(".submit-card");
-const closeBtn = document.querySelector(".close");
+const modal=document.getElementById("submitModal");
 
-if (modal && addCard && closeBtn) {
+const addCard=document.querySelector(".submit-card");
 
-    addCard.addEventListener("click", () => {
-        modal.style.display = "flex";
-    });
+const closeBtn=document.querySelector(".close");
 
-    closeBtn.addEventListener("click", () => {
-        modal.style.display = "none";
-    });
+if(addCard){
 
-    window.addEventListener("click", (event) => {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    });
+addCard.onclick=()=>{
+
+modal.style.display="flex";
 
 }
 
+}
+
+if(closeBtn){
+
+closeBtn.onclick=()=>{
+
+modal.style.display="none";
+
+}
+
+}
+
+window.onclick=(e)=>{
+
+if(e.target==modal){
+
+modal.style.display="none";
+
+}
+
+};
+
+
 // ===============================
-// Temporary Form Submission
+// SUBMISSIONS
 // ===============================
 
-const submissionForm = document.getElementById("submissionForm");
+const form=document.getElementById("submissionForm");
 
-if (submissionForm) {
+const cards=document.querySelector(".cards");
 
-    submissionForm.addEventListener("submit", function (e) {
+if(form){
 
-        e.preventDefault();
+form.addEventListener("submit",(e)=>{
 
-        alert("Thank you! Your submission feature will be connected soon.");
+e.preventDefault();
 
-        submissionForm.reset();
+const title=form.querySelectorAll("input")[0].value;
 
-        modal.style.display = "none";
+const author=form.querySelectorAll("input")[1].value;
 
-    });
+const image="placeholder.jpg";
+
+const card=document.createElement("div");
+
+card.className="work-card";
+
+card.innerHTML=`
+
+<img src="${image}" alt="submission">
+
+<div class="work-content">
+
+<h3>${title}</h3>
+
+<p>by ${author}</p>
+
+</div>
+
+`;
+
+cards.appendChild(card);
+
+form.reset();
+
+modal.style.display="none";
+
+});
 
 }
