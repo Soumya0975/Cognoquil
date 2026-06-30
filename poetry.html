@@ -1,142 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Poetry | Cognoquill</title>
-
     <link rel="stylesheet" href="cognoquill.css">
-
 </head>
-
 <body>
 
 <header class="category-header">
-
     <h1>COGNOQUILL</h1>
-
     <a href="index.html" class="back-home">← Back Home</a>
-
 </header>
 
 <section class="paper">
-
     <h2 class="page-title">POETRY</h2>
-
     <p class="description">
-
-        Every poem begins with a feeling.
-        Share yours or discover beautiful words written by others.
-
+        Every poem begins with a feeling. Share yours or discover beautiful words written by others.
     </p>
 
     <div class="cards">
-
         <!-- SUBMIT CARD -->
-
         <div class="submit-card">
-
             <span>+</span>
-
             <h3>Share Your Work</h3>
-
             <p>Click to submit your poem.</p>
-
         </div>
 
-
         <!-- SAMPLE CARD -->
-
         <div class="work-card">
-
             <img src="placeholder.jpg" alt="Poem">
-
             <div class="work-content">
-
                 <h3>No submissions yet</h3>
-
                 <p>Be the first poet on Cognoquill.</p>
-
             </div>
-
         </div>
-
 
         <!-- SAMPLE CARD -->
-
         <div class="work-card">
-
             <img src="placeholder.jpg" alt="Poem">
-
             <div class="work-content">
-
                 <h3>No submissions yet</h3>
-
                 <p>Your poem could be here.</p>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
 
 <!-- ===========================
      SUBMISSION MODAL
 =========================== -->
-
 <div class="modal" id="submitModal">
-
     <div class="modal-content">
-
         <span class="close">&times;</span>
-
         <h2>Share Your Work</h2>
-
         <form id="submissionForm">
-
-            <input
-                type="text"
-                placeholder="Title"
-                required
-            >
-
-            <input
-                type="text"
-                placeholder="Your Name"
-                required
-            >
-
-            <input
-                type="email"
-                placeholder="Email"
-                required
-            >
-
-            <textarea
-                rows="8"
-                placeholder="Write your poem..."
-                required
-            ></textarea>
-
-            <button type="submit">
-
-                Submit
-
-            </button>
-
+            <input type="text" placeholder="Title" required>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea rows="8" placeholder="Write your poem..." required></textarea>
+            <button type="submit">Submit</button>
         </form>
-
     </div>
-
 </div>
 
 <script src="cognoquill.js"></script>
-
 </body>
-
 </html>
