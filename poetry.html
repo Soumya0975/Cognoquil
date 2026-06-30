@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Poetry | Cognoquill</title>
     <meta charset="UTF-8">
@@ -20,38 +21,15 @@
 
     <p class="description">
 
-        Every poem begins with a feeling. Share yours or discover
-        beautiful words written by others.
+        Every poem begins with a feeling. Share yours or discover beautiful words written by others.
 
     </p>
 
     <div class="cards">
 
-        <!-- Add Card -->
+        <div class="submit-card">
 
-       <div class="submit-card">
-    <span>+</span>
-</div>
-
-        </div>
-
-        <!-- Card -->
-
-        <div class="work-card">
-
-            <h3>No submissions yet</h3>
-
-            <p>Be the first to share.</p>
-
-        </div>
-
-        <!-- Card -->
-
-        <div class="work-card">
-
-            <h3>No submissions yet</h3>
-
-            <p>Be the first to share.</p>
+            <span>+</span>
 
         </div>
 
@@ -59,7 +37,8 @@
 
 </div>
 
-  <!-- Submit Modal -->
+<!-- Submit Modal -->
+
 <div class="modal" id="submitModal">
 
     <div class="modal-content">
@@ -70,29 +49,42 @@
 
         <form id="submissionForm">
 
-            <input type="text" placeholder="Title" required>
+            <input
+                type="text"
+                placeholder="Title"
+                required
+            >
 
-            <input type="text" placeholder="Your Name" required>
+            <input
+                type="text"
+                placeholder="Your Name"
+                required
+            >
 
-            <input type="email" placeholder="Email" required>
+            <input
+                type="email"
+                placeholder="Email"
+                required
+            >
 
             <textarea
-                placeholder="Write your poem..."
                 rows="8"
-                required></textarea>
+                placeholder="Write your poem..."
+                required
+            ></textarea>
 
-            <button type="submit">Submit</button>
+            <button type="submit">
+                Submit
+            </button>
 
         </form>
 
     </div>
 
-
-
 </div>
 
 <script src="cognoquill.js"></script>
-    
 
 </body>
+
 </html>
