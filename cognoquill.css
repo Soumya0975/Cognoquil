@@ -228,3 +228,106 @@ footer {
         letter-spacing: 6px;
     }
 }
+/* ===========================
+     RULED PAPER MODAL STYLES
+=========================== */
+.modal {
+    display: none; /* Controlled by JS */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 26, 18, 0.6); /* Warm dark overlay */
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #F4EBE1; /* Match parchment background */
+    padding: 40px;
+    border-radius: 12px;
+    width: min(600px, 90%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    border: 1px solid #D7C4B1;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #7A5C43;
+}
+
+.modal-content h2 {
+    font-size: 2.2rem;
+    color: #4A3222;
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* ===========================
+     THE RULED TEXTAREA PAGE
+=========================== */
+#submissionForm textarea {
+    width: 100%;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: #2B1810;
+    padding: 6px 10px;
+    border: 1px solid #D7C4B1;
+    border-radius: 4px;
+    resize: none;
+    
+    /* Creates the vintage ruled notebook lines */
+    background: linear-gradient(#F4EBE1 95%, #D4C3B3 95%);
+    background-size: 100% 2rem; /* Spacing between lines */
+    line-height: 2rem;          /* Matches text perfectly to the lines */
+    
+    margin-bottom: 20px;
+}
+
+/* Standard Inputs Styling inside Modal */
+#submissionForm input[type="text"],
+#submissionForm input[type="email"] {
+    width: 100%;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #D7C4B1;
+    background: #FFFDF9;
+    color: #3E2723;
+    border-radius: 4px;
+}
+
+#submissionForm input:focus,
+#submissionForm textarea:focus {
+    outline: none;
+    border-color: #7A5C43;
+}
+
+/* Submit Button */
+#submissionForm button {
+    width: 100%;
+    background: #7A5C43;
+    color: #FFFDF9;
+    border: none;
+    padding: 12px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+#submissionForm button:hover {
+    background: #5C432E;
+}
