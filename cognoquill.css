@@ -331,3 +331,81 @@ footer {
 #submissionForm button:hover {
     background: #5C432E;
 }
+
+/* ===================================================
+   MODAL & VINTAGE RULED LINES (DO NOT CHANGE HTML)
+=================================================== */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 26, 18, 0.5); /* Soft dark-academia tint */
+    backdrop-filter: blur(3px);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: #F4EBE1; /* Parchment matching the page */
+    padding: 30px;
+    border-radius: 12px;
+    width: min(500px, 90%);
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border: 1px solid #D7C4B1;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #7A5C43;
+}
+
+/* Elegant Ruled Lines Textarea Layout */
+#submissionForm textarea {
+    width: 100%;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: #2B1810;
+    padding: 7px 10px;
+    border: 1px solid #D7C4B1;
+    border-radius: 4px;
+    resize: none;
+    
+    /* Ruled paper background effect */
+    background: linear-gradient(#F4EBE1 95%, #D4C3B3 95%);
+    background-size: 100% 2rem; 
+    line-height: 2rem;          
+    
+    margin-bottom: 15px;
+}
+
+#submissionForm input {
+    width: 100%;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #D7C4B1;
+    background: #FFFDF9;
+    border-radius: 4px;
+}
+
+#submissionForm button {
+    width: 100%;
+    background: #7A5C43;
+    color: #FFFDF9;
+    border: none;
+    padding: 12px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
