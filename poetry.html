@@ -2,42 +2,92 @@
 <html lang="en">
 
 <head>
-    <title>Poetry | Cognoquill</title>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Poetry | Cognoquill</title>
+
     <link rel="stylesheet" href="cognoquill.css">
+
 </head>
 
 <body>
 
 <header class="category-header">
 
-    <h1>POETRY</h1>
+    <h1>COGNOQUILL</h1>
+
+    <a href="index.html" class="back-home">← Back Home</a>
 
 </header>
 
-<div class="paper">
+<section class="paper">
+
+    <h2 class="page-title">POETRY</h2>
 
     <p class="description">
 
-        Every poem begins with a feeling. Share yours or discover beautiful words written by others.
+        Every poem begins with a feeling.
+        Share yours or discover beautiful words written by others.
 
     </p>
 
     <div class="cards">
 
+        <!-- SUBMIT CARD -->
+
         <div class="submit-card">
 
             <span>+</span>
+
+            <h3>Share Your Work</h3>
+
+            <p>Click to submit your poem.</p>
+
+        </div>
+
+
+        <!-- SAMPLE CARD -->
+
+        <div class="work-card">
+
+            <img src="placeholder.jpg" alt="Poem">
+
+            <div class="work-content">
+
+                <h3>No submissions yet</h3>
+
+                <p>Be the first poet on Cognoquill.</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SAMPLE CARD -->
+
+        <div class="work-card">
+
+            <img src="placeholder.jpg" alt="Poem">
+
+            <div class="work-content">
+
+                <h3>No submissions yet</h3>
+
+                <p>Your poem could be here.</p>
+
+            </div>
 
         </div>
 
     </div>
 
-</div>
+</section>
 
-<!-- Submit Modal -->
+<!-- ===========================
+     SUBMISSION MODAL
+=========================== -->
 
 <div class="modal" id="submitModal">
 
@@ -74,7 +124,9 @@
             ></textarea>
 
             <button type="submit">
+
                 Submit
+
             </button>
 
         </form>
