@@ -5,52 +5,82 @@
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
 
-menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-});
+if (menuBtn && navLinks) {
 
-// Close menu after clicking a link (mobile)
-document.querySelectorAll("#navLinks a").forEach(link => {
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("show");
+    menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
     });
-});
 
-// Navbar shadow while scrolling
+    document.querySelectorAll("#navLinks a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("show");
+        });
+    });
+
+}
+
+// ===============================
+// Navbar Shadow on Scroll
+// ===============================
+
 window.addEventListener("scroll", () => {
+
     const nav = document.querySelector("nav");
+
+    if (!nav) return;
 
     if (window.scrollY > 40) {
         nav.style.boxShadow = "0 5px 15px rgba(0,0,0,0.18)";
     } else {
         nav.style.boxShadow = "none";
     }
+
 });
 
+// ===============================
+// Submission Modal
+// ===============================
+
 const modal = document.getElementById("submitModal");
-
 const addCard = document.querySelector(".submit-card");
-
 const closeBtn = document.querySelector(".close");
 
-addCard.onclick = function () {
+if (modal && addCard && closeBtn) {
 
-    modal.style.display = "flex";
+    addCard.addEventListener("click", () => {
+        modal.style.display = "flex";
+    });
+
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
 
 }
 
-closeBtn.onclick = function () {
+// ===============================
+// Temporary Form Submission
+// ===============================
 
-    modal.style.display = "none";
+const submissionForm = document.getElementById("submissionForm");
 
-}
+if (submissionForm) {
 
-window.onclick = function (event) {
+    submissionForm.addEventListener("submit", function (e) {
 
-    if(event.target == modal){
+        e.preventDefault();
+
+        alert("Thank you! Your submission feature will be connected soon.");
+
+        submissionForm.reset();
 
         modal.style.display = "none";
 
-    }
+    });
 
 }
