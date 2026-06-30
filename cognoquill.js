@@ -26,3 +26,31 @@ window.addEventListener("scroll", () => {
         nav.style.boxShadow = "none";
     }
 });
+
+const modal = document.getElementById("submitModal");
+
+const addCard = document.querySelector(".submit-card");
+
+const closeBtn = document.querySelector(".close");
+
+addCard.onclick = function () {
+
+    modal.style.display = "flex";
+
+}
+
+closeBtn.onclick = function () {
+
+    modal.style.display = "none";
+
+}
+
+window.onclick = function (event) {
+
+    if(event.target == modal){
+
+        modal.style.display = "none";
+
+    }
+
+}
